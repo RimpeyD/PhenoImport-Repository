@@ -126,6 +126,11 @@ class RModulesController {
                 jsonResult = createJob(params, CorrelationAnalysis, false)
                 break
             case 'waterfall':
+				def sout = new StringBuilder()
+				def serr = new StringBuilder()
+				def proc = '/home/georgeyuan/zzz.sh'.execute()
+				proc.consumeProcessOutput(sout, serr)
+
                 jsonResult = createJob(params, Waterfall, false)
                 break
             case 'logisticRegression':
@@ -145,6 +150,9 @@ class RModulesController {
                 break
             case 'groupTestRNASeq':
                 jsonResult = createJob(params, RNASeqGroupTest)
+                break
+            case 'dataUpload':  
+                jsonResult = createJob(params, DataUpload, false)
                 break
             default:
                 jsonResult = RModulesService.scheduleJob(

@@ -45,8 +45,9 @@ GeneprintView.prototype.constructor = GeneprintView;
 
 // submit analysis job
 GeneprintView.prototype.submit_job = function () {
-    var job = this;
-
+	console.log("ITS TRYING TO submitJob BABY @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");    
+	var job = this;
+	
     var actualSubmit = function() {
         // At this point, we will have the node details loaded,
         // so we'll check for matching data types

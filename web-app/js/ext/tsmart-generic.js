@@ -377,6 +377,7 @@ GenericAnalysisView = Ext.extend(Object, {
      * @returns {boolean}
      */
     submitJob: function (formParams, callback, view) {
+		console.log("ITS TRYING TO submitJob BABY @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         var _parent = this;
 
         this.callback = callback;

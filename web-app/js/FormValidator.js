@@ -350,7 +350,6 @@ FormValidator.prototype.push_error = function (err_msg, args) {
 }
 
 FormValidator.prototype.display_errors = function () {
-
     var _err_msgs = this.error_messages;
     var _err_str = "";
 

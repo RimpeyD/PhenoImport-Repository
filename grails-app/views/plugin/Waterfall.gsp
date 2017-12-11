@@ -1,7 +1,6 @@
 %{--include js lib for heatmap dynamically--}%
 <r:require modules="waterfall"/>
 <r:layoutResources disposition="defer"/>
-
 <div id="analysisWidget">
 
     <h2>

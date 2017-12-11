@@ -467,6 +467,7 @@ function readConceptVariables(divIds){
 
 function submitJob(formParams)
 {
+	console.log("ITS TRYING TO submitJob BABY @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     //Make sure at least one subset is filled in.
     if(isSubsetEmpty(1) && isSubsetEmpty(2))
     {
@@ -498,6 +499,7 @@ function submitJob(formParams)
 }
 
 function runJob(result, formParams) {
+	console.log("ITS TRYING TO runJob BABY @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     var jobNameInfo = Ext.util.JSON.decode(result.responseText);
     var jobName = jobNameInfo.jobName;
     setJobNameFromRun(jobName);

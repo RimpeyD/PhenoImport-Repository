@@ -58,6 +58,9 @@ modules = {
     waterfall {
         resource url: [plugin: 'rdc-rmodules', dir: 'js/plugin', file: 'Waterfall.js']
     }
+    data_upload {
+        resource url: [plugin: 'rdc-rmodules', dir: 'js/plugin', file: 'DataUpload.js']
+    }
     geneprint {
         resource url:"/js/geneprint/jquery.min.js"
         resource url:"/js/geneprint/jquery-ui.min.js"

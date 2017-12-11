@@ -22,6 +22,7 @@ KMeansClusteringView.prototype.constructor = KMeansClusteringView;
 
 // submit analysis job
 KMeansClusteringView.prototype.submit_job = function () {
+	console.log("GOT HERE BABY@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     var job = this;
 
     var actualSubmit = function() {
