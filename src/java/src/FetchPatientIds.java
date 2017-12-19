@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.lang.Object;
 import java.net.HttpURLConnection;
-import java.util.Base64;
+import javax.xml.bind.DatatypeConverter;
 
 import java.util.Scanner;
 
@@ -48,8 +48,9 @@ public class FetchPatientIds extends HttpServlet {
 			String authorization = username + ":" + password;
 			
 			url = new URL(newUrl);
-			String encoding = Base64.getEncoder().encodeToString((authorization).getBytes("UTF-8"));
-			
+//			String encoding = Base64.getEncoder().encodeToString((authorization).getBytes("UTF-8"));
+			String encoding = DatatypeConverter.printBase64Binary((authorization).getBytes("UTF-8"));
+						
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
 			connection.setDoOutput(true);
@@ -79,7 +80,8 @@ public class FetchPatientIds extends HttpServlet {
 			String newUrl = formerUrl + "/" + id;
 			
 			url = new URL(newUrl);
-			String encoding = Base64.getEncoder().encodeToString((username+":"+password).getBytes("UTF-8"));
+//			String encoding = Base64.getEncoder().encodeToString((username+":"+password).getBytes("UTF-8"));
+			String encoding = DatatypeConverter.printBase64Binary((username+":"+password).getBytes("UTF-8"));
 			
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
